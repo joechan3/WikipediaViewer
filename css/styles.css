@@ -67,6 +67,7 @@ a:active{
 
 #searchResults{
   margin-top: 2.369em;
+  min-height: 90vh;
 }
 
 .panel,
@@ -81,25 +82,13 @@ a:active{
 }
 
 footer {
-  /*display: none;*/
   font-size: 1em;
-  position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
 }
 
 @media (max-width: 767px) {
 .input-group-wrapper{
   max-width:100%;
-  }
-}
-
-@media (max-height: 320px) {
-  footer {
-    position: relative;
-    margin-top: 2.369em;
-    bottom: 0;
-    left: 50%;
   }
 }
