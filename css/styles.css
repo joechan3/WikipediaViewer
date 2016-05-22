@@ -1,0 +1,74 @@
+/*Color palette: 
+Dark blue - #0094AE
+Blue - #00AECC 
+Gray - #E6E8E8
+White
+Black
+*/
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'EB Garamond', serif;
+  background-color: #0094AE;
+  color: #fff;
+}
+
+h1{
+  font-size: 2.369em;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 2.369em;
+}
+
+h1, p{
+  text-align: center;
+  
+}
+
+.input-group-wrapper{
+  max-width:50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-control,
+.btn[title*="Wikipedia"]{
+  background-color: #00AECC;
+  border-color: #fff;
+  color:#fff;
+}
+
+.form-control:hover,
+.form-control:active,
+.form-control:focus,
+.btn[title*="Wikipedia"]:hover,
+.btn[title*="Wikipedia"]:active,
+.btn[title*="Wikipedia"]:focus{
+  background-color: white;
+  color: #000;
+  outline-color:#fff;
+}
+
+a{
+  border-bottom: 1px dotted #fff;
+  color: white;
+}
+
+a:visited,
+a:hover,
+a:active{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  font-size: 1em;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
