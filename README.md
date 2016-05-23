@@ -10,7 +10,7 @@ Wikipedia viewer allows the user to search for Wikipedia entries in a search box
 * Bootstrap
 * jQuery
 * JavaScript
-* Brackets
+* Brackets w/ JSHint
 
 ## Authors
 
