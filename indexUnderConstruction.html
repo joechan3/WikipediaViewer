@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Search Wikipedia and see the resulting Wikipedia entries.">
@@ -15,19 +16,23 @@
     <![endif]-->
     <title>Wikipedia Viewer</title>
   </head>
+
   <body class="container">
     <h1>Wikipedia Viewer</h1>
     <div class="input-group-wrapper">
       <div class="input-group">
         <input type="text" class="form-control">
         <div class="input-group-btn">
-          <button class="btn btn-default" id = "searchButton" type="button" aria-label="Search Wikipedia" title="Search Wikipedia"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-          <a class="btn btn-default" type="button" aria-label="Random article" title="Get a random Wikipedia article" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a>
-        </div><!--.input-group-btn-->
-      </div><!--.input-group-->
-    </div><!--.input-group-wrapper-->
-    <section class="row" id="searchResults">
-    </section>
+          <button class="btn btn-default" id="searchButton" type="button" aria-label="Search Wikipedia" title="Search Wikipedia"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <a class="btn btn-default" aria-label="Random article" title="Get a random Wikipedia article" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a>
+        </div>
+        <!--.input-group-btn-->
+      </div>
+      <!--.input-group-->
+    </div>
+    <!--.input-group-wrapper-->
+    <div class="row" id="searchResults">
+    </div>
     <footer>
       <p>
         Wikipedia Viewer coded by <a href="https://github.com/joechan3" target="_blank" title="View Joseph Chan&apos;s GitHub profile">Joseph Chan</a>
@@ -36,4 +41,5 @@
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
   </body>
+
 </html>
