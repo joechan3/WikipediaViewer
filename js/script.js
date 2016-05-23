@@ -1,3 +1,6 @@
+/* jshint undef: true, unused: true, strict: true, curly: true, eqeqeq: true, futurehostile: true, latedef: true, shadow: outer */
+/* globals $, document */
+
 $(document).ready(function() {
   "use strict";
 
@@ -49,7 +52,8 @@ $(document).ready(function() {
       }
     }
 
-    $("input").blur(); //hide mobile keyboard after search
+    //Hide mobile keyboard after search
+    $("input").blur();
   }
 
   //Clear search field
