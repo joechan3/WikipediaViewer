@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  "use strict";
+  
   function getWikipediaResults(searchTerms, callback) {
     var apiURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerms + "&limit=10&namespace=0&format=json&warningsaserror=true&callback=?";
 
@@ -20,7 +22,7 @@ $(document).ready(function() {
     $("#searchResults").children().remove();
 
     if (searchResults[1].length === 0) {
-      //For no search results
+      //Handle zero search results
       $("#searchResults").append(searchResultHTML);
       $(".panel-heading").html("<p style='text-align:left'>Your search - " + searchWords + " - did not match any Wikipedia entries.</p>");
       $(".panel-body").html(
@@ -32,7 +34,7 @@ $(document).ready(function() {
         "</ul>"
       );
     } else {
-      //Create a search result panel(s)
+      //Create search result panel(s)
       for (var i = 0; i < searchResults[1].length; i++) {
         $("#searchResults").append(searchResultHTML);
         $(".panel-heading:eq(" + i + ") a").attr("href", searchResults[3][i]);
@@ -46,6 +48,7 @@ $(document).ready(function() {
       }
     }
 
+    $("input").blur(); //hide mobile keyboard after search
   }
 
   //Clear search field
