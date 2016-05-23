@@ -5,7 +5,12 @@ Wikipedia viewer allows the user to search for Wikipedia entries in a search box
 
 ## Built With
 
-*TBD
+* HTML
+* CSS
+* Bootstrap
+* jQuery
+* JavaScript
+* Brackets
 
 ## Authors
 
@@ -17,5 +22,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-* TBD
+* [MediaWiki action API](https://www.mediawiki.org/wiki/API:Main_page)
 
