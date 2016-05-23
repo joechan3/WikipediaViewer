@@ -1,6 +1,6 @@
 $(document).ready(function() {
   "use strict";
-  
+
   function getWikipediaResults(searchTerms, callback) {
     var apiURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerms + "&limit=10&namespace=0&format=json&warningsaserror=true&callback=?";
 
@@ -12,7 +12,7 @@ $(document).ready(function() {
   function updateHTML(searchResults, searchWords) {
     var searchResultHTML = "<div class='col-sm-6 col-sm-offset-3'>" +
       "<div class='panel panel-default'>" +
-      "<div class='panel-heading'><a href='#' target='_blank'>Panel heading without title</a></div>" +
+      "<div class='panel-heading'><a href='#' target='_blank' title=''>Panel heading without title</a></div>" +
       "<div class='panel-body'>" +
       "</div>" +
       "</div>" +
@@ -24,10 +24,10 @@ $(document).ready(function() {
     if (searchResults[1].length === 0) {
       //Handle zero search results
       $("#searchResults").append(searchResultHTML);
-      $(".panel-heading").html("<p style='text-align:left'>Your search - " + searchWords + " - did not match any Wikipedia entries.</p>");
+      $(".panel-heading").html("<p class='zeroResults'>Your search - " + searchWords + " - did not match any Wikipedia entries.</p>");
       $(".panel-body").html(
-        "<p style='text-align:left'>Suggestions:</p>" +
-        "<ul style='text-align:left'>" +
+        "<p class='zeroResults'>Suggestions:</p>" +
+        "<ul class='zeroResults'>" +
         "<li>Make sure that all words are spelled correctly.</li>" +
         "<li>Try different keywords." +
         "<li>Try more general keywords." +
@@ -38,6 +38,7 @@ $(document).ready(function() {
       for (var i = 0; i < searchResults[1].length; i++) {
         $("#searchResults").append(searchResultHTML);
         $(".panel-heading:eq(" + i + ") a").attr("href", searchResults[3][i]);
+        $(".panel-heading:eq(" + i + ") a").attr("title", "Visit the Wikipedia page for " + searchResults[1][i]);
         $(".panel-heading:eq(" + i + ") a").html(searchResults[1][i]);
 
         //Limit summary to 140 characters (arbitrary decision)
