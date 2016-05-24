@@ -46,11 +46,16 @@ p {
   margin: 0 auto;
 }
 
+.form-control{
+  height: 39.7167px;
+}
+
 .form-control,
 .btn[title*="Wikipedia"] {
   background-color: #00AECC;
   border-color: #fff;
   color: #fff;
+  font-size: 18px;
 }
 
 .form-control:hover,
