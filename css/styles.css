@@ -46,8 +46,12 @@ p {
   margin: 0 auto;
 }
 
+.input-group{
+  height: 40px;
+}
+
 .form-control{
-  height: 39.7167px;
+  height: 40px;
 }
 
 .form-control,
@@ -56,6 +60,10 @@ p {
   border-color: #fff;
   color: #fff;
   font-size: 18px;
+}
+
+.btn[title*="Wikipedia"]{
+  height: 40px;
 }
 
 .form-control:hover,
